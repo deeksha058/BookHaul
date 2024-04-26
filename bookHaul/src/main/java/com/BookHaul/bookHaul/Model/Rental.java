@@ -2,6 +2,7 @@ package com.BookHaul.bookHaul.Model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -17,10 +18,8 @@ public class Rental {
     @Column(nullable = false)
     private String renterName;
 
-    @Column(nullable = false)
-    private Date rentalDate;
+    private LocalDate rentalDate;
 
-    @Column(nullable = false)
-    private Date returnDate;
+    private LocalDate returnDate;
 
 }

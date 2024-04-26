@@ -39,6 +39,16 @@ public class BookService {
         return bookRepository.save(book);
     }
 
+    public Book updateBookByAvailability(Long id, boolean isPresent) throws ResourceNotFoundException {
+
+        Book book = bookRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Book", "id", id));
+
+        book.setId(id);
+        book.setRented(isPresent);
+        return bookRepository.save(book);
+    }
+
     public void deleteBook(Long id) throws ResourceNotFoundException  {
         Book book = bookRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Book", "id", id));

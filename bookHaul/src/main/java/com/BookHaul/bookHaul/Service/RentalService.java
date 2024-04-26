@@ -26,6 +26,7 @@ public class RentalService {
                 .orElseThrow(() -> new ResourceNotFoundException("Rental", "id", id));
     }
 
+
     public Rental updateRental(Long id, Rental rentalDetails) throws ResourceNotFoundException  {
         Rental rental = rentalRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Rental", "id", id));
