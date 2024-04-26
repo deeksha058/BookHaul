@@ -19,7 +19,8 @@ public class Author {
     @Column(nullable = false)
     private String biography;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     private List<Book> books;
+
 
 }
