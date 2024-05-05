@@ -111,7 +111,8 @@ The project uses the following dependencies:
   POST /rentals/renting
   Content-Type: application/json
   {
-    "bookId": 1
+    "bookId": 1,
+    "renterName" : "harish"
   }
   
 - **Return a rented book:**
